@@ -61,7 +61,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
 
-$(call soong_config_set,camera,override_format_from_reserved,true)
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
 
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
@@ -137,6 +137,7 @@ PRODUCT_PACKAGES += \
 # Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+$(call soong_config_set_bool,lineage_health,charging_control_supports_bypass,false)
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -145,6 +146,9 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm
+    vendor.lineage.livedisplay-service.sdm
+
+$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
 
 # Media
 PRODUCT_COPY_FILES += \
