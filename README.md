@@ -1,8 +1,2 @@
-# Common device tree for Xiaomi SM6250 devices
+# device tree for Xiaomi Miatoll Devices
 
-```
-#
-# SPDX-FileCopyrightText: The LineageOS Project
-# SPDX-License-Identifier: Apache-2.0
-#
-```
